@@ -1,4 +1,6 @@
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
 
 using namespace std;
 struct Node { //lab-11
@@ -27,5 +29,11 @@ int main(){
             tail = newNode;
         }
     }
-    
+    cout << "Queue: ";
+    Node* temp = head;
+    while (temp != nullptr) {
+        cout << temp->name << ", " << temp-> drinks;
+        temp = temp-> next;
+    }
+    cout << endl;
 }

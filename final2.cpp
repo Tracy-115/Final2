@@ -17,8 +17,8 @@ int main(){
 
     for (int i = 0; i<3; i++){
         Node* newNode = new Node;
-        newNode -> name = names [rand() % 10];
-        newNode -> drink = drinks [rand90 % 8];
+        newNode -> name = names [rand() % 5];
+        newNode -> drink = drinks [rand() % 5];
         newNode -> next = nullptr;
 
         if (head == nullptr){
@@ -39,11 +39,10 @@ int main(){
     }
     cout << endl;
 
-    deque<pair<string,string>> Muffin;
+    deque<string> Muffin;
     for (int m= 0; m<3; m++){
         string name = names [rand() % 5];
-        int counting = muff [rand() %5];
-        muffQ.push_back({name, counting});
+        muffQ.push_back(name);
     }
 
 
@@ -79,8 +78,7 @@ int main(){
 
         if (rand()%2 ==0) {
             string name = names [rand() % 5];
-            int counting = muff [rand() %5];
-            muffQ.push_back({name, counting});
+            muffQ.push_back(name);
         }
         if (!MuffQ.empty()){
             cout << "Muffin Served: " << muffQ.front().first << ", " << nuffQ.front().second << endl;

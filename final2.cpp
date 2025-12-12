@@ -55,6 +55,17 @@ int main(){
             }
             cout << "New Joined" << endl;
         }
-
+        if (head != nullptr){
+            cout << "Just served " << head->name << endl;
+            Node* temp = head;
+            head = head -> next;
+            if (head == nullptr){
+                tail = nullptr;
+            }
+            else {
+                cout << "No one to serve" << endl;
+            }
+        
+        }
     }
 }

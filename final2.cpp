@@ -39,7 +39,7 @@ int main(){
     }
     cout << endl;
 
-    deque<string> Muffin;
+    deque<string> muffQ;
     for (int m= 0; m<3; m++){
         string name = names [rand() % 5];
         muffQ.push_back(name);
@@ -88,7 +88,7 @@ int main(){
             string name = names [rand() % 5];
             muffQ.push_back(name);
         }
-        if (!MuffQ.empty()){
+        if (!muffQ.empty()){
             cout << "Muffin Served: " << muffQ.front().first << ", " << nuffQ.front().second << endl;
             muffQ.pop_front();
         }
@@ -96,7 +96,7 @@ int main(){
             cout << "No one to serve" << endl;
         }
 
-        if(friendB.empty()){
+        if(!friendB.empty()){
             cout << "Bracelet Given: " << friendB.front() << endl;
             friendB.erase(friendB.begin());
         }
@@ -106,7 +106,13 @@ int main(){
         if (rand() % 2 == 0){
             friendB.push_back(names[rand() % 5]);
         }
-        if(phy)
+        if(!phy.empty()){
+            cout << "Physics Textbook given to: " <<phy.top() << endl;
+            phy.pop();
+        }
+        if(rand()%2 == 0){
+        phy.push(names[rand()%5]);
+        }
     }
 
 }

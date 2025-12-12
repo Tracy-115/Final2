@@ -76,5 +76,19 @@ int main(){
             }
         
         }
+
+        if (rand()%2 ==0) {
+            string name = names [rand() % 5];
+            int counting = muff [rand() %5];
+            muffQ.push_back({name, counting});
+        }
+        if (!MuffQ.empty()){
+            cout << "Muffin Served: " << muffQ.front().first << ", " << nuffQ.front().second << endl;
+            muffQ.pop_front();
+        }
+        else{
+            cout << "No one to serve" << endl;
+        }
     }
+
 }

@@ -29,6 +29,7 @@ int main(){
             tail = newNode;
         }
     }
+
     cout << "Queue: ";
     Node* temp = head;
     while (temp != nullptr) {
@@ -36,4 +37,24 @@ int main(){
         temp = temp-> next;
     }
     cout << endl;
+
+    for (int r= 1; 1<= 10; r++){
+        cout << "Round Number: " << r << endl;
+        if (rand() %2 == 0){
+            Node* newNode = new Node;
+            newNode -> name = names [rand()%5];
+            newNode -> drinks = drinks [rand()%5];
+            nreNode ->next = nullptr;
+            if (head == nullptr){
+                head = tail = newNode;
+
+            }
+            else {
+                tail-> next = newNode;
+                tail = newNode;
+            }
+            cout << "New Joined" << endl;
+        }
+
+    }
 }

@@ -21,7 +21,7 @@ int main(){
     for (int i = 0; i<3; i++){
         Node* newNode = new Node;
         newNode -> name = names [rand() % 5];
-        newNode -> drink = drinks [rand() % 5];
+        newNode -> drinks = drinks [rand() % 5];
         newNode -> next = nullptr;
 
         if (head == nullptr){
@@ -37,7 +37,7 @@ int main(){
     cout << "Queue: ";
     Node* temp = head;
     while (temp != nullptr) {
-        cout << temp->name << ", " << temp-> drinks;
+        cout << temp->name << ", " << temp-> drinks << "; ";
         temp = temp-> next;
     }
     cout << endl;
@@ -86,6 +86,14 @@ int main(){
             }
         
         }
+        cout << "Coffee Queue: ";
+        Node* temp = head;
+        while(temp != nullptr) {
+            cout << temp->name << "(" << temp->drinks << ") ";
+            temp = temp->next;
+        }
+        if(head == nullptr) cout << "empty";
+        cout << endl;
 
         if (rand()%2 ==0) {
             string name = names [rand() % 5];
@@ -98,6 +106,15 @@ int main(){
         else{
             cout << "No one to serve" << endl;
         }
+        cout << "Muffin Queue: ";
+        if(!muffQ.empty()) {
+            for(auto& name : muffQ)
+                cout << name << " ";
+        } 
+        else {
+            cout << "empty";
+        }
+        cout << endl;
 
         if(!friendB.empty()){
             cout << "Bracelet Given: " << friendB.front() << endl;
@@ -109,6 +126,15 @@ int main(){
         if (rand() % 2 == 0){
             friendB.push_back(names[rand() % 5]);
         }
+        cout << "Bracelet Queue: ";
+        if(!friendB.empty()) {
+            for(auto& name : friendB)
+            cout << name << " ";
+        } 
+        else {
+            cout << "empty";
+        }
+        cout << endl;
         if(!phy.empty()){
             cout << "Physics Textbook given to: " <<phy.top() << endl;
             phy.pop();
@@ -116,6 +142,7 @@ int main(){
         if(rand()%2 == 0){
         phy.push(names[rand()%5]);
         }
+
     }
 
 }

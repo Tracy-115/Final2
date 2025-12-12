@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <deque>
 
 using namespace std;
 struct Node { //lab-11
@@ -37,6 +38,14 @@ int main(){
         temp = temp-> next;
     }
     cout << endl;
+
+    deque<pair<string,string>> Muffin;
+    for (int m= 0; m<3; m++){
+        string name = names [rand() % 5];
+        int counting = muff [rand() %5];
+        muffQ.push_back({name, counting});
+    }
+
 
     for (int r= 1; 1<= 10; r++){
         cout << "Round Number: " << r << endl;

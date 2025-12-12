@@ -58,6 +58,7 @@ int main(){
     }
 
     for (int r= 1; r<= 10; r++){
+        cout << "------------------" << endl;
         cout << "Round Number: " << r << endl;
         if (rand() %2 == 0){
             Node* newNode = new Node;
@@ -78,8 +79,9 @@ int main(){
             cout << "Just served " << head->name << endl;
             Node* temp = head;
             head = head -> next;
-            if (head == nullptr){
+            if (head != nullptr){
                 tail = nullptr;
+                delete temp;
             }
             else {
                 cout << "No one to serve" << endl;
@@ -89,10 +91,11 @@ int main(){
         cout << "Coffee Queue: ";
         Node* temp = head;
         while(temp != nullptr) {
-            cout << temp->name << "(" << temp->drinks << ") ";
+            cout << temp->name << "(" << temp->drinks << "), ";
             temp = temp->next;
         }
         if(head == nullptr) cout << "empty";
+        cout << endl;
         cout << endl;
 
         if (rand()%2 ==0) {
@@ -115,6 +118,7 @@ int main(){
             cout << "empty";
         }
         cout << endl;
+        cout << endl;
 
         if(!friendB.empty()){
             cout << "Bracelet Given: " << friendB.front() << endl;
@@ -135,6 +139,7 @@ int main(){
             cout << "empty";
         }
         cout << endl;
+        cout << endl;
         if(!phy.empty()){
             cout << "Physics Textbook given to: " <<phy.top() << endl;
             phy.pop();
@@ -142,7 +147,19 @@ int main(){
         if(rand()%2 == 0){
         phy.push(names[rand()%5]);
         }
-
+        cout << "Physics Textbook Stack: ";
+        if(!phy.empty()) {
+            stack<string> tempStack = phy;
+            while(!tempStack.empty()) {
+            cout << tempStack.top() << " ";
+            tempStack.pop();
+            }
+        } 
+        else {
+            cout << "empty";
+        }
+        cout << endl;
+        cout << endl;
     }
 
 }

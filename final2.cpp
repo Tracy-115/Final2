@@ -2,6 +2,9 @@
 #include <cstdlib>
 #include <ctime>
 #include <deque>
+#include <stack>
+#include <vector>
+#include <string>
 
 using namespace std;
 struct Node { //lab-11
@@ -47,20 +50,20 @@ int main(){
 
     vector<string> friendB;
     for(int b = 0; b<3; b++){
-        friendB.push_back(names[rand()%5]):
+        friendB.push_back(names[rand()%5]);
     }
     stack<string> phy;
     for(int p= 0; p<3; p++){
         phy.push(names[rand()%5]);
     }
 
-    for (int r= 1; 1<= 10; r++){
+    for (int r= 1; r<= 10; r++){
         cout << "Round Number: " << r << endl;
         if (rand() %2 == 0){
             Node* newNode = new Node;
             newNode -> name = names [rand()%5];
             newNode -> drinks = drinks [rand()%5];
-            nreNode ->next = nullptr;
+            newNode ->next = nullptr;
             if (head == nullptr){
                 head = tail = newNode;
 
@@ -89,7 +92,7 @@ int main(){
             muffQ.push_back(name);
         }
         if (!muffQ.empty()){
-            cout << "Muffin Served: " << muffQ.front().first << ", " << nuffQ.front().second << endl;
+            cout << "Muffin Served: " << muffQ.front() << endl;
             muffQ.pop_front();
         }
         else{

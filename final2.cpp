@@ -45,6 +45,11 @@ int main(){
         muffQ.push_back(name);
     }
 
+    vextor<string> friendB;
+    for(int b = 0; b<3; b++){
+        friendB.push_back(names[rand()%5]):
+    }
+
 
     for (int r= 1; 1<= 10; r++){
         cout << "Round Number: " << r << endl;
@@ -86,6 +91,17 @@ int main(){
         }
         else{
             cout << "No one to serve" << endl;
+        }
+
+        if(friendB.empty()){
+            cout << "Bracelet Given: " << friendB.front() << endl;
+            friendB.erase(friendB.begin());
+        }
+        else{
+            cout << "No one to serve" << endl;
+        }
+        if (rand() % 2 == 0){
+            friendB.push_back(names[rand() % 5]);
         }
     }
 

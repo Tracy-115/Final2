@@ -45,11 +45,14 @@ int main(){
         muffQ.push_back(name);
     }
 
-    vextor<string> friendB;
+    vector<string> friendB;
     for(int b = 0; b<3; b++){
         friendB.push_back(names[rand()%5]):
     }
-
+    stack<string> phy;
+    for(int p= 0; p<3; p++){
+        phy.push(names[rand()%5]);
+    }
 
     for (int r= 1; 1<= 10; r++){
         cout << "Round Number: " << r << endl;
@@ -103,6 +106,7 @@ int main(){
         if (rand() % 2 == 0){
             friendB.push_back(names[rand() % 5]);
         }
+        if(phy)
     }
 
 }
